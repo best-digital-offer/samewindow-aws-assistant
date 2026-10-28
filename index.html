@@ -60,6 +60,18 @@ a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{heigh
 @media(max-width:1000px){.rail-image img{max-height:none}}
 @media(max-width:700px){.hero-stage{grid-template-columns:1fr}.side-rail{height:300px}.rail-track{flex-direction:row;width:max-content;animation-name:rail-left;animation-duration:38s}.right-rail .rail-track{animation-name:rail-right;animation-duration:40s}.rail-image{width:280px;flex:0 0 280px}.rail-image img{max-height:none}.rail-image:hover{transform:scale(1.02)}}
 
+
+/* Stable layout: no independently scrolling screenshot rails. The page scrolls normally. */
+.hero-stage{grid-template-columns:minmax(0,1fr) minmax(0,650px) minmax(0,1fr);max-width:1160px;min-height:unset;overflow:visible;gap:20px;padding:24px 0 34px}
+.hero-stage .hero{padding:55px 0 48px}
+.side-rail{height:auto;overflow:visible;mask-image:none;align-self:center}
+.rail-track,.right-rail .rail-track{animation:none!important;transform:none!important;will-change:auto;gap:0}
+.rail-image{display:none}
+.rail-image:first-child{display:block}
+.rail-image:hover{transform:none;box-shadow:0 14px 40px #0005;border-color:#2b3e58}
+@media(max-width:1000px){.hero-stage{grid-template-columns:minmax(0,1fr) minmax(0,1.7fr) minmax(0,1fr);gap:12px;padding-inline:0}.side-rail{height:auto}.hero-stage .hero h1{font-size:clamp(30px,4vw,46px)}}
+@media(max-width:700px){.hero-stage{display:flex;flex-direction:column;gap:12px;padding:24px 0 30px}.hero-stage .hero{order:0;padding:35px 0 25px}.left-rail{order:1}.right-rail{order:2}.side-rail{width:100%;height:auto;overflow:visible;mask-image:none}.rail-track,.right-rail .rail-track{flex-direction:column;width:100%;animation:none!important;transform:none!important}.rail-image{width:min(100%,420px);margin:0 auto}.hero-stage .hero h1{font-size:clamp(36px,10vw,52px)}}
+
 </style></head>
 <body>
 <header class="wrap nav"><div class="brand"><div class="mark">SW</div><span>SameWindow <span style="color:#fbbf24">AWS Assistant</span></span></div><span class="tag">Model 6 · AI Investigation Timeline</span></header>
@@ -92,6 +104,6 @@ a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{heigh
 <section class="privacy"><div><h2>Your console context should stay under your control.</h2><p>Cloud diagnosis is an optional step. Review the information before sending it and avoid sharing credentials, secrets, or sensitive production data.</p></div><ul class="checks"><li>Local detection first</li><li>Explicit review before cloud sharing</li><li>Redaction of likely sensitive identifiers</li><li>Open development repository</li></ul></section>
 </main><footer class="wrap"><span>© <span id="year"></span> SameWindow AWS Assistant</span><span><a href="https://github.com/best-digital-offer/samewindow-aws-assistant">Source code</a> · Built independently</span></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();
-document.querySelectorAll('.rail-track').forEach(function(track){if(track.dataset.loopReady==='true')return;Array.from(track.children).forEach(function(card){var clone=card.cloneNode(true);clone.setAttribute('aria-hidden','true');clone.querySelectorAll('img').forEach(function(img){img.loading='eager';});track.appendChild(clone);});track.dataset.loopReady='true';});
+// Screenshot rails are static; no cloning or independent scrolling.
 document.querySelectorAll('.track').forEach(function(track){if(track.dataset.loopReady==='true')return;Array.from(track.children).forEach(function(card){var clone=card.cloneNode(true);clone.setAttribute('aria-hidden','true');clone.querySelectorAll('a,button,input,[tabindex]').forEach(function(el){el.setAttribute('tabindex','-1');});track.appendChild(clone);});track.dataset.loopReady='true';});</script>
 </body></html>
