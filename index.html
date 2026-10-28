@@ -51,19 +51,35 @@ a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{heigh
 .rail-card:hover{transform:scale(1.075);border-color:#f5a623;box-shadow:0 22px 52px #000a,0 0 0 1px #f5a62330;z-index:10}
 @media(max-width:700px){.mini-shot{height:84px;flex-basis:84px}.rail-card:hover{transform:scale(1.045)}}
 
+
+/* Use the real supplied screenshot crops in both continuous rails. */
+.rail-image{margin:0;flex:0 0 auto;width:100%;border:1px solid #2b3e58;border-radius:14px;overflow:hidden;background:#0b121e;box-shadow:0 14px 40px #0005;transition:transform .45s cubic-bezier(.16,1,.3,1),border-color .4s ease,box-shadow .4s ease;transform-origin:center;position:relative;z-index:0}
+.rail-image img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain;object-position:top center;background:#0b121e}
+.rail-image:hover{transform:scale(1.075);border-color:#f5a623;box-shadow:0 22px 52px #000a,0 0 0 1px #f5a62330;z-index:10}
+.hero-stage .rail-track{gap:18px}
+@media(max-width:1000px){.rail-image img{max-height:300px}}
+@media(max-width:700px){.rail-image{width:210px;flex-basis:210px}.rail-image img{max-height:290px}.rail-image:hover{transform:scale(1.045)}}
+
 </style></head>
 <body>
 <header class="wrap nav"><div class="brand"><div class="mark">SW</div><span>SameWindow <span style="color:#fbbf24">AWS Assistant</span></span></div><span class="tag">Model 6 · AI Investigation Timeline</span></header>
 <main class="wrap">
 <section class="hero-stage" aria-label="SameWindow introduction">
 <div class="side-rail left-rail"><div class="rail-track">
-<article class="rail-card"><div class="mini-shot error-shot"><div class="shot-bar"><b></b><i></i><i></i></div><div class="shot-alert"><span>!</span><div><b>Deployment Error</b><small>Access denied</small></div></div><div class="shot-row"></div><div class="shot-row short"></div></div><span class="rail-icon">⌕</span><strong>Automatic Detection</strong><small>Detect visible AWS errors</small></article>
-<article class="rail-card"><div class="mini-shot timeline-shot"><div class="shot-bar"><b></b><i></i><i></i></div><div class="shot-step"><span>✓</span><div><b>Capture context</b><small>AWS Console</small></div></div><div class="shot-step active"><span>2</span><div><b>Analyze error</b><small>In progress…</small></div></div><div class="shot-step"><span>3</span><div><b>Find solution</b><small>Next step</small></div></div></div><span class="rail-icon">◷</span><strong>Investigation Timeline</strong><small>Follow each analysis step</small></article>
-<article class="rail-card"><div class="mini-shot history-shot"><div class="shot-bar"><b></b><i></i><i></i></div><div class="shot-history"><span class="status red-dot"></span><div><b>CloudFormation</b><small>Access denied</small></div><em>New</em></div><div class="shot-history"><span class="status green-dot"></span><div><b>Lambda function</b><small>Resolved</small></div><em>Fixed</em></div></div><span class="rail-icon">▤</span><strong>Error History</strong><small>Review previous detections</small></article>
+<figure class="rail-image"><img src="/images/panel-01-error-detected.png" alt="Automatically detected AWS console error" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-02-side-panel.png" alt="SameWindow extension side panel" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-03-analysis-progress.png" alt="AWS error analysis in progress" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-04-root-cause.png" alt="AI root cause explanation" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-05-recommended-solution.png" alt="Recommended solution steps" loading="eager" /></figure>
 </div></div>
 <section class="hero"><div class="eyebrow"><span class="dot"></span> Built for AWS Console troubleshooting</div><h1>Turn AWS console errors into <span>clear next steps.</span></h1><p>Detect visible AWS errors, follow a clear investigation timeline, and review guided fixes before you apply them.</p><div class="actions"><a class="btn primary" href="https://github.com/best-digital-offer/samewindow-aws-assistant">View project on GitHub ↗</a><a class="btn secondary" href="https://github.com/best-digital-offer/samewindow-aws-assistant#local-development">Setup instructions</a></div><p class="note">Early access project · Firefox-first · Not affiliated with or endorsed by AWS.</p></section>
 <div class="side-rail right-rail"><div class="rail-track">
-<article class="rail-card"><div class="mini-shot ai-shot"><div class="shot-bar"><b></b><i></i><i></i></div><div class="shot-success">✓ Analysis complete</div><b class="shot-title">Root Cause <span>85%</span></b><p>Missing IAM permission may block the request.</p><div class="shot-row"></div><div class="shot-row short"></div></div><span class="rail-icon">✦</span><strong>AI Analysis</strong><small>Understand likely root causes</small></article>
+<figure class="rail-image"><img src="/images/panel-06-test-verify.png" alt="Test and verify a suggested fix" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-07-documentation.png" alt="Detailed troubleshooting documentation" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-08-error-history.png" alt="Investigation error history" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-09-settings.png" alt="SameWindow settings" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-10-notifications.png" alt="Notification preferences" loading="eager" /></figure>
+</div></div><span class="rail-icon">✦</span><strong>AI Analysis</strong><small>Understand likely root causes</small></article>
 <article class="rail-card"><div class="mini-shot fix-shot"><div class="shot-bar"><b></b><i></i><i></i></div><div class="fix-step"><span>1</span><div><b>Review IAM policy</b><small>Check permissions</small></div></div><div class="fix-step"><span>2</span><div><b>Verify role</b><small>Confirm attachment</small></div></div><div class="fix-step"><span>3</span><div><b>Test safely</b><small>Validate changes</small></div></div></div><span class="rail-icon">✓</span><strong>Guided Fix</strong><small>Step-by-step suggestions</small></article>
 <article class="rail-card"><div class="mini-shot verify-shot"><div class="shot-bar"><b></b><i></i><i></i></div><div class="verify-line"><span>✓</span>Create test environment</div><div class="verify-line"><span>✓</span>Apply proposed fix</div><div class="verify-line current"><span>◉</span>Run verification…</div><div class="shot-success">Sandbox ready to test</div></div><span class="rail-icon">◈</span><strong>Test &amp; Verify</strong><small>Validate before applying</small></article>
 </div></div>
@@ -73,5 +89,5 @@ a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{heigh
 <section class="privacy"><div><h2>Your console context should stay under your control.</h2><p>Cloud diagnosis is an optional step. Review the information before sending it and avoid sharing credentials, secrets, or sensitive production data.</p></div><ul class="checks"><li>Local detection first</li><li>Explicit review before cloud sharing</li><li>Redaction of likely sensitive identifiers</li><li>Open development repository</li></ul></section>
 </main><footer class="wrap"><span>© <span id="year"></span> SameWindow AWS Assistant</span><span><a href="https://github.com/best-digital-offer/samewindow-aws-assistant">Source code</a> · Built independently</span></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();
-document.querySelectorAll('.rail-track').forEach(function(track){if(track.dataset.loopReady==='true')return;Array.from(track.children).forEach(function(card){var clone=card.cloneNode(true);clone.setAttribute('aria-hidden','true');track.appendChild(clone);});track.dataset.loopReady='true';});</script>
+document.querySelectorAll('.rail-track').forEach(function(track){if(track.dataset.loopReady==='true')return;Array.from(track.children).forEach(function(card){var clone=card.cloneNode(true);clone.setAttribute('aria-hidden','true');clone.querySelectorAll('img').forEach(function(img){img.loading='eager';});track.appendChild(clone);});track.dataset.loopReady='true';});track.dataset.loopReady='true';});</script>
 </body></html>
