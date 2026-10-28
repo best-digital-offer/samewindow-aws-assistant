@@ -17,14 +17,11 @@ a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{heigh
 @media(max-width:700px){.hero{padding:58px 0 35px}.grid{grid-template-columns:1fr;padding-top:30px}.privacy{grid-template-columns:1fr;padding:23px}.tag{display:none}.demo{width:255px;flex-basis:255px}.track{animation-duration:70s}.track.reverse{animation-duration:65s}}
 @media(prefers-reduced-motion:reduce){.track{animation-duration:120s}.track.reverse{animation-duration:115s}.demo{transition-duration:.45s}}
 
-.hero-stage{position:relative;display:grid;grid-template-columns:minmax(280px,320px) minmax(0,680px) minmax(280px,320px);gap:clamp(12px,2vw,28px);align-items:center;justify-content:center;max-width:1500px;margin:0 auto;min-height:590px;padding:24px 22px 34px;overflow:hidden}
+.hero-stage{position:relative;display:grid;grid-template-columns:minmax(250px,300px) minmax(0,650px) minmax(250px,300px);gap:clamp(12px,2vw,28px);align-items:center;justify-content:center;max-width:1500px;margin:0 auto;min-height:590px;padding:24px 22px 34px;overflow:hidden}
 .hero-stage .hero{padding:55px 0 48px;min-width:0}
-.side-rail{height:520px;overflow:hidden;position:relative;mask-image:linear-gradient(to bottom,transparent,black 9%,black 91%,transparent);align-self:center}
-.rail-track{display:flex;flex-direction:column;align-items:center;gap:18px;width:100%;animation:rail-up 30s linear infinite;will-change:transform;transform:translate3d(0,0,0);backface-visibility:hidden}
+.side-rail{height:560px;overflow:hidden;position:relative;mask-image:linear-gradient(to bottom,transparent,black 9%,black 91%,transparent);align-self:center}
+.rail-track{display:flex;flex-direction:column;gap:16px;width:100%;animation:rail-up 30s linear infinite;will-change:transform;transform:translate3d(0,0,0);backface-visibility:hidden}
 .right-rail .rail-track{animation-name:rail-down;animation-duration:32s}
-/* Keep the original full-size scrolling preview cards in the side rails; no tiny thumbnails. */
-.side-rail .demo{width:280px;flex:0 0 310px;min-height:310px}
-.side-rail .demo-top{display:none}
 .side-rail:hover .rail-track{animation-play-state:paused}
 @keyframes rail-up{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,-50%,0)}}
 @keyframes rail-down{from{transform:translate3d(0,-50%,0)}to{transform:translate3d(0,0,0)}}
@@ -34,8 +31,8 @@ a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{heigh
 .rail-card strong{font-size:14px;line-height:1.25}.rail-card small{font-size:11px;line-height:1.4;color:#aebbd0}
 .rail-lines{display:flex;flex-direction:column;gap:7px;width:100%;margin-top:auto}.rail-lines i{display:block;height:6px;border-radius:6px;background:#29394e;width:100%}.rail-lines i:nth-child(2){width:78%}.rail-lines i:nth-child(3){width:55%}
 .showcase-head{display:none}
-@media(max-width:1000px){.hero-stage{grid-template-columns:minmax(280px,300px) minmax(0,1fr) minmax(280px,300px);gap:10px;padding-inline:12px}.side-rail{height:420px}.rail-card{min-height:170px;flex-basis:170px;padding:13px 10px}.hero-stage .hero h1{font-size:clamp(30px,4vw,46px)}}
-@media(max-width:700px){.hero-stage{display:flex;flex-direction:column;padding:24px 20px 30px;min-height:unset;overflow:visible}.hero-stage .hero{padding:35px 0 25px}.side-rail{width:100%;height:330px;overflow:hidden;mask-image:linear-gradient(to right,transparent,black 5%,black 95%,transparent)}.rail-track{flex-direction:row;width:max-content;animation-name:rail-left;animation-duration:36s}.right-rail .rail-track{animation-name:rail-right;animation-duration:39s}.side-rail .demo{width:280px;min-width:280px;flex-basis:310px}.hero-stage .hero h1{font-size:clamp(36px,10vw,52px)}.grid{grid-template-columns:1fr;padding-top:30px}.privacy{grid-template-columns:1fr;padding:23px}.tag{display:none}}
+@media(max-width:1000px){.hero-stage{grid-template-columns:minmax(110px,160px) minmax(0,1fr) minmax(110px,160px);gap:10px;padding-inline:12px}.side-rail{height:420px}.rail-card{min-height:170px;flex-basis:170px;padding:13px 10px}.hero-stage .hero h1{font-size:clamp(30px,4vw,46px)}}
+@media(max-width:700px){.hero-stage{display:flex;flex-direction:column;padding:24px 20px 30px;min-height:unset;overflow:visible}.hero-stage .hero{padding:35px 0 25px}.side-rail{width:100%;height:auto;overflow:hidden;mask-image:linear-gradient(to right,transparent,black 5%,black 95%,transparent)}.rail-track{flex-direction:row;width:max-content;animation-name:rail-left;animation-duration:36s}.right-rail .rail-track{animation-name:rail-right;animation-duration:39s}.rail-card{width:190px;min-width:190px;min-height:150px;flex-basis:150px}.hero-stage .hero h1{font-size:clamp(36px,10vw,52px)}.grid{grid-template-columns:1fr;padding-top:30px}.privacy{grid-template-columns:1fr;padding:23px}.tag{display:none}}
 @keyframes rail-left{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}@keyframes rail-right{from{transform:translate3d(-50%,0,0)}to{transform:translate3d(0,0,0)}}
 
 
@@ -57,23 +54,38 @@ a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{heigh
 
 /* Use the real supplied screenshot crops in both continuous rails. */
 .rail-image{margin:0;flex:0 0 auto;width:100%;border:1px solid #2b3e58;border-radius:14px;overflow:hidden;background:#0b121e;box-shadow:0 14px 40px #0005;transition:transform .45s cubic-bezier(.16,1,.3,1),border-color .4s ease,box-shadow .4s ease;transform-origin:center;position:relative;z-index:0}
-.rail-image img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain;object-position:top center;background:#0b121e}
+.rail-image img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;background:#0b121e}
 .rail-image:hover{transform:scale(1.075);border-color:#f5a623;box-shadow:0 22px 52px #000a,0 0 0 1px #f5a62330;z-index:10}
-.hero-stage .rail-track{gap:18px}
-@media(max-width:1000px){.rail-image img{max-height:300px}}
-@media(max-width:700px){.rail-image{width:210px;flex-basis:210px}.rail-image img{max-height:290px}.rail-image:hover{transform:scale(1.045)}}
+.hero-stage .rail-track{gap:18px;width:100%}
+@media(max-width:1000px){.rail-image img{max-height:none}}
+@media(max-width:700px){.hero-stage{grid-template-columns:1fr}.side-rail{height:300px}.rail-track{flex-direction:row;width:max-content;animation-name:rail-left;animation-duration:38s}.right-rail .rail-track{animation-name:rail-right;animation-duration:40s}.rail-image{width:280px;flex:0 0 280px}.rail-image img{max-height:none}.rail-image:hover{transform:scale(1.02)}}
 
 </style></head>
 <body>
 <header class="wrap nav"><div class="brand"><div class="mark">SW</div><span>SameWindow <span style="color:#fbbf24">AWS Assistant</span></span></div><span class="tag">Model 6 · AI Investigation Timeline</span></header>
 <main class="wrap">
 <section class="hero-stage" aria-label="SameWindow introduction">
-<div class="side-rail left-rail"><div class="rail-track">
-<article class="demo"><div class="demo-top"><span class="cloud">☁</span><strong>SameWindow<br/>AWS Assistant</strong><span class="window-dots">⌁ ×</span></div><div class="demo-body"><span class="pill red">ERROR DETECTED</span><h3>CloudFormation stack update failed</h3><p>Deployment error detected in MyFunction. The resource handler returned AccessDenied.</p><div class="mini-line"></div><div class="mini-line mid"></div><div class="fullbtn">View analysis →</div></div>
-<section class="hero"><div class="eyebrow"><span class="dot"></span> Built for AWS Console troubleshooting</div><h1>Turn AWS console errors into <span>clear next steps.</span></h1><p>Detect visible AWS errors, follow a clear investigation timeline, and review guided fixes before you apply them.</p><div class="actions"><a class="btn primary" href="https://github.com/best-digital-offer/samewindow-aws-assistant">View project on GitHub ↗</a><a class="btn secondary" href="https://github.com/best-digital-offer/samewindow-aws-assistant#local-development">Setup instructions</a></div><p class="note">Early access project · Firefox-first · Not affiliated with or endorsed by AWS.</p></section>
-<div class="side-rail right-rail"><div class="rail-track">
-<article class="demo"><div class="demo-top"><span class="cloud">☁</span><strong>Detailed<br/>documentation</strong><span class="window-dots">⌁ ×</span></div><div class="demo-body"><h3>AWS documentation</h3><div class="setting">IAM Access Denied Errors <span>↗</span></div><div class="setting">Lambda role permissions <span>↗</span></div><div class="setting">S3 bucket policies <span>↗</span></div><div class="setting">CloudFormation events <span>↗</span></div><div class="setting">Troubleshooting guide <span>↗</span></div></div>
-</div>
+  <div class="side-rail left-rail"><div class="rail-track">
+    <figure class="rail-image"><img src="/images/panel-01-error-detected.png" alt="AWS error detected" loading="eager"></figure>
+    <figure class="rail-image"><img src="/images/panel-02-side-panel.png" alt="SameWindow side panel" loading="eager"></figure>
+    <figure class="rail-image"><img src="/images/panel-03-analysis-progress.png" alt="Error analysis progress" loading="eager"></figure>
+    <figure class="rail-image"><img src="/images/panel-04-root-cause.png" alt="Root cause analysis" loading="eager"></figure>
+    <figure class="rail-image"><img src="/images/panel-05-recommended-solution.png" alt="Recommended solution" loading="eager"></figure>
+  </div></div>
+  <section class="hero">
+    <div class="eyebrow"><span class="dot"></span> Built for AWS Console troubleshooting</div>
+    <h1>Turn AWS console errors into <span>clear next steps.</span></h1>
+    <p>Detect visible AWS errors, follow a clear investigation timeline, and review guided fixes before you apply them.</p>
+    <div class="actions"><a class="btn primary" href="https://github.com/best-digital-offer/samewindow-aws-assistant">View project on GitHub ↗</a><a class="btn secondary" href="https://github.com/best-digital-offer/samewindow-aws-assistant#local-development">Setup instructions</a></div>
+    <p class="note">Early access project · Firefox-first · Not affiliated with or endorsed by AWS.</p>
+  </section>
+  <div class="side-rail right-rail"><div class="rail-track">
+    <figure class="rail-image"><img src="/images/panel-06-test-verify.png" alt="Test and verify a suggested fix" loading="eager"></figure>
+    <figure class="rail-image"><img src="/images/panel-07-documentation.png" alt="Troubleshooting documentation" loading="eager"></figure>
+    <figure class="rail-image"><img src="/images/panel-08-error-history.png" alt="Error history" loading="eager"></figure>
+    <figure class="rail-image"><img src="/images/panel-09-settings.png" alt="Settings" loading="eager"></figure>
+    <figure class="rail-image"><img src="/images/panel-10-notifications.png" alt="Notification settings" loading="eager"></figure>
+  </div></div>
 </section>
 
 <section class="grid" aria-label="Product benefits"><article class="card"><div class="ico">⌕</div><h2>Detect locally</h2><p>Recognize common error and alert messages visible in supported AWS Console pages.</p></article><article class="card"><div class="ico">◷</div><h2>Investigation timeline</h2><p>Review detected issues and track each investigation step in one place.</p></article><article class="card"><div class="ico">✦</div><h2>AI, only with consent</h2><p>Review diagnostic context before sharing it. Never share credentials or secrets.</p></article></section>
