@@ -15,5 +15,6 @@ jobs:
         with:
           node-version: 20
       - run: npm install --legacy-peer-deps
+      - run: npx wxt prepare
       - run: npm run typecheck
       - run: npm run build:firefox
