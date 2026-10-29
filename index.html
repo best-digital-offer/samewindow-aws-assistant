@@ -17,9 +17,9 @@ a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{heigh
 @media(max-width:700px){.hero{padding:58px 0 35px}.grid{grid-template-columns:1fr;padding-top:30px}.privacy{grid-template-columns:1fr;padding:23px}.tag{display:none}.demo{width:255px;flex-basis:255px}.track{animation-duration:70s}.track.reverse{animation-duration:65s}}
 @media(prefers-reduced-motion:reduce){.track{animation-duration:120s}.track.reverse{animation-duration:115s}.demo{transition-duration:.45s}}
 
-.hero-stage{position:relative;display:grid;grid-template-columns:minmax(250px,300px) minmax(0,650px) minmax(250px,300px);gap:clamp(12px,2vw,28px);align-items:center;justify-content:center;max-width:1500px;margin:0 auto;min-height:590px;padding:24px 22px 34px;overflow:hidden}
+.hero-stage{position:relative;display:grid;grid-template-columns:minmax(145px,210px) minmax(0,760px) minmax(145px,210px);gap:clamp(12px,2vw,28px);align-items:center;justify-content:center;max-width:1500px;margin:0 auto;min-height:590px;padding:24px 22px 34px;overflow:hidden}
 .hero-stage .hero{padding:55px 0 48px;min-width:0}
-.side-rail{height:560px;overflow:hidden;position:relative;mask-image:linear-gradient(to bottom,transparent,black 9%,black 91%,transparent);align-self:center}
+.side-rail{height:470px;overflow:hidden;position:relative;mask-image:linear-gradient(to bottom,transparent,black 9%,black 91%,transparent);align-self:center}
 .rail-track{display:flex;flex-direction:column;gap:16px;width:100%;animation:rail-up 30s linear infinite;will-change:transform;transform:translate3d(0,0,0);backface-visibility:hidden}
 .right-rail .rail-track{animation-name:rail-down;animation-duration:32s}
 .side-rail:hover .rail-track{animation-play-state:paused}
@@ -54,63 +54,57 @@ a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{heigh
 
 /* Use the real supplied screenshot crops in both continuous rails. */
 .rail-image{margin:0;flex:0 0 auto;width:100%;border:1px solid #2b3e58;border-radius:14px;overflow:hidden;background:#0b121e;box-shadow:0 14px 40px #0005;transition:transform .45s cubic-bezier(.16,1,.3,1),border-color .4s ease,box-shadow .4s ease;transform-origin:center;position:relative;z-index:0}
-.rail-image img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;background:#0b121e}
+.rail-image img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain;object-position:top center;background:#0b121e}
 .rail-image:hover{transform:scale(1.075);border-color:#f5a623;box-shadow:0 22px 52px #000a,0 0 0 1px #f5a62330;z-index:10}
-.hero-stage .rail-track{gap:18px;width:100%}
-@media(max-width:1000px){.rail-image img{max-height:none}}
-@media(max-width:700px){.hero-stage{grid-template-columns:1fr}.side-rail{height:300px}.rail-track{flex-direction:row;width:max-content;animation-name:rail-left;animation-duration:38s}.right-rail .rail-track{animation-name:rail-right;animation-duration:40s}.rail-image{width:280px;flex:0 0 280px}.rail-image img{max-height:none}.rail-image:hover{transform:scale(1.02)}}
-
-
-/* Stable layout: no independently scrolling screenshot rails. The page scrolls normally. */
-.hero-stage{grid-template-columns:minmax(0,1fr) minmax(0,650px) minmax(0,1fr);max-width:1160px;min-height:unset;overflow:visible;gap:20px;padding:24px 0 34px}
-.hero-stage .hero{padding:55px 0 48px}
-.side-rail{height:auto;overflow:visible;mask-image:none;align-self:center}
-.rail-track,.right-rail .rail-track{animation:none!important;transform:none!important;will-change:auto;gap:0}
-.rail-image{display:none}
-.rail-image:first-child{display:block}
-.rail-image:hover{transform:none;box-shadow:0 14px 40px #0005;border-color:#2b3e58}
-@media(max-width:1000px){.hero-stage{grid-template-columns:minmax(0,1fr) minmax(0,1.7fr) minmax(0,1fr);gap:12px;padding-inline:0}.side-rail{height:auto}.hero-stage .hero h1{font-size:clamp(30px,4vw,46px)}}
-@media(max-width:700px){.hero-stage{display:flex;flex-direction:column;gap:12px;padding:24px 0 30px}.hero-stage .hero{order:0;padding:35px 0 25px}.left-rail{order:1}.right-rail{order:2}.side-rail{width:100%;height:auto;overflow:visible;mask-image:none}.rail-track,.right-rail .rail-track{flex-direction:column;width:100%;animation:none!important;transform:none!important}.rail-image{width:min(100%,420px);margin:0 auto}.hero-stage .hero h1{font-size:clamp(36px,10vw,52px)}}
-
-
-/* Final hero layout: remove broken side labels/screenshots and use ordinary page scrolling. */
-.hero-stage{display:flex;align-items:center;justify-content:center;min-height:690px;max-width:1160px;padding:54px 20px 76px;overflow:visible}
-.hero-stage .hero{width:100%;max-width:780px;padding:60px 0 70px;margin:0 auto}
-.hero-stage .side-rail,.hero-stage .rail-image{display:none!important}
-@media(max-width:700px){.hero-stage{min-height:610px;padding:30px 0 48px}.hero-stage .hero{padding:48px 0 58px}}
-
-
-/* No animated or horizontal scrolling sections anywhere on the page. */
-.marquee,.showcase-head{display:none!important}
-.track,.rail-track{animation:none!important;transform:none!important;will-change:auto!important}
-html{scroll-behavior:auto}
-body{overflow-x:hidden}
-
-
-/* Guarantee enough document height for ordinary vertical browser scrolling. */
-html,body{min-height:100%;height:auto;overflow-y:auto!important}
-main.wrap{min-height:0}
-.hero-stage{min-height:900px!important}
-@media(max-width:700px){.hero-stage{min-height:780px!important}}
+.hero-stage .rail-track{gap:18px}
+@media(max-width:1000px){.rail-image img{max-height:300px}}
+@media(max-width:700px){.rail-image{width:210px;flex-basis:210px}.rail-image img{max-height:290px}.rail-image:hover{transform:scale(1.045)}}
 
 </style></head>
 <body>
 <header class="wrap nav"><div class="brand"><div class="mark">SW</div><span>SameWindow <span style="color:#fbbf24">AWS Assistant</span></span></div><span class="tag">Model 6 · AI Investigation Timeline</span></header>
 <main class="wrap">
 <section class="hero-stage" aria-label="SameWindow introduction">
-  <section class="hero">
-    <div class="eyebrow"><span class="dot"></span> Built for AWS Console troubleshooting</div>
-    <h1>Turn AWS console errors into <span>clear next steps.</span></h1>
-    <p>Detect visible AWS errors, follow a clear investigation timeline, and review guided fixes before you apply them.</p>
-    <div class="actions"><a class="btn primary" href="https://github.com/best-digital-offer/samewindow-aws-assistant">View project on GitHub ↗</a><a class="btn secondary" href="https://github.com/best-digital-offer/samewindow-aws-assistant#local-development">Setup instructions</a></div>
-    <p class="note">Early access project · Firefox-first · Not affiliated with or endorsed by AWS.</p>
-  </section>
+<div class="side-rail left-rail"><div class="rail-track">
+<figure class="rail-image"><img src="/images/panel-01-error-detected.png" alt="Automatically detected AWS console error" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-02-side-panel.png" alt="SameWindow extension side panel" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-03-analysis-progress.png" alt="AWS error analysis in progress" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-04-root-cause.png" alt="AI root cause explanation" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-05-recommended-solution.png" alt="Recommended solution steps" loading="eager" /></figure>
+</div></div>
+<section class="hero"><div class="eyebrow"><span class="dot"></span> Built for AWS Console troubleshooting</div><h1>Turn AWS console errors into <span>clear next steps.</span></h1><p>Detect visible AWS errors, follow a clear investigation timeline, and review guided fixes before you apply them.</p><div class="actions"><a class="btn primary" href="https://github.com/best-digital-offer/samewindow-aws-assistant">View project on GitHub ↗</a><a class="btn secondary" href="https://github.com/best-digital-offer/samewindow-aws-assistant#local-development">Setup instructions</a></div><p class="note">Early access project · Firefox-first · Not affiliated with or endorsed by AWS.</p></section>
+<div class="side-rail right-rail"><div class="rail-track">
+<figure class="rail-image"><img src="/images/panel-06-test-verify.png" alt="Test and verify a suggested fix" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-07-documentation.png" alt="Detailed troubleshooting documentation" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-08-error-history.png" alt="Investigation error history" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-09-settings.png" alt="SameWindow settings" loading="eager" /></figure>
+<figure class="rail-image"><img src="/images/panel-10-notifications.png" alt="Notification preferences" loading="eager" /></figure>
+</div></div>
+<article class="rail-card"><div class="mini-shot fix-shot"><div class="shot-bar"><b></b><i></i><i></i></div><div class="fix-step"><span>1</span><div><b>Review IAM policy</b><small>Check permissions</small></div></div><div class="fix-step"><span>2</span><div><b>Verify role</b><small>Confirm attachment</small></div></div><div class="fix-step"><span>3</span><div><b>Test safely</b><small>Validate changes</small></div></div></div><span class="rail-icon">✓</span><strong>Guided Fix</strong><small>Step-by-step suggestions</small></article>
+<article class="rail-card"><div class="mini-shot verify-shot"><div class="shot-bar"><b></b><i></i><i></i></div><div class="verify-line"><span>✓</span>Create test environment</div><div class="verify-line"><span>✓</span>Apply proposed fix</div><div class="verify-line current"><span>◉</span>Run verification…</div><div class="shot-success">Sandbox ready to test</div></div><span class="rail-icon">◈</span><strong>Test &amp; Verify</strong><small>Validate before applying</small></article>
+</div></div>
 </section>
+
+<div class="marquee" aria-label="Automatically scrolling product feature previews">
+<div class="track">
+<article class="demo"><div class="demo-top"><span class="cloud">☁</span><strong>SameWindow<br/>AWS Assistant</strong><span class="window-dots">⌁ ×</span></div><div class="demo-body"><span class="pill red">ERROR DETECTED</span><h3>CloudFormation stack update failed</h3><p>Deployment error detected in MyFunction. The resource handler returned AccessDenied.</p><div class="mini-line"></div><div class="mini-line mid"></div><div class="fullbtn">View analysis →</div></div></article>
+<article class="demo"><div class="demo-top"><span class="cloud">☁</span><strong>Investigation<br/>timeline</strong><span class="window-dots">⌁ ×</span></div><div class="demo-body"><span class="pill blue">ANALYSIS IN PROGRESS</span><div class="step"><span class="num">1</span><div>Capture context<small>AWS Console error identified</small></div></div><div class="step"><span class="num">2</span><div>Classify error<small>AccessDenied · IAM permission</small></div></div><div class="step"><span class="num">3</span><div>Find root cause<small>Checking role and resource policy</small></div></div><div class="log">10:24:12 Parsing error…<br/>10:24:13 Identifying AWS service…</div></div></article>
+<article class="demo"><div class="demo-top"><span class="cloud">☁</span><strong>Root cause<br/>explanation</strong><span class="window-dots">⌁ ×</span></div><div class="demo-body"><span class="pill green">ANALYSIS COMPLETE</span><h3>Missing IAM permission</h3><p>The Lambda execution role may not have permission to access the required S3 resource.</p><div class="step"><span class="num">✓</span><div>Key finding<small>s3:GetObject permission may be missing</small></div></div><div class="mini-line"></div><div class="mini-line short"></div><div class="fullbtn">View solution →</div></div></article>
+<article class="demo"><div class="demo-top"><span class="cloud">☁</span><strong>Recommended<br/>solution</strong><span class="window-dots">⌁ ×</span></div><div class="demo-body"><span class="pill blue">GUIDED FIX</span><div class="step"><span class="num">1</span><div>Review IAM policy<small>Check required permissions</small></div></div><div class="step"><span class="num">2</span><div>Verify execution role<small>Confirm role attachment</small></div></div><div class="step"><span class="num">3</span><div>Test safely<small>Validate before applying changes</small></div></div><div class="fullbtn">Copy all steps</div></div></article>
+<article class="demo"><div class="demo-top"><span class="cloud">☁</span><strong>Sandbox<br/>verification</strong><span class="window-dots">⌁ ×</span></div><div class="demo-body"><span class="pill amber">OPTIONAL TEST</span><h3>Test in a safe environment</h3><div class="step"><span class="num">✓</span><div>Create test environment</div></div><div class="step"><span class="num">✓</span><div>Apply proposed fix</div></div><div class="step"><span class="num">3</span><div>Run verification<small>Awaiting user confirmation</small></div></div><div class="log">Test output<br/>&gt; Checking permissions…<br/>&gt; Waiting for test result…</div></div></article>
+</div></div>
+<div class="marquee" aria-label="More automatically scrolling feature previews"><div class="track reverse">
+<article class="demo"><div class="demo-top"><span class="cloud">☁</span><strong>Detailed<br/>documentation</strong><span class="window-dots">⌁ ×</span></div><div class="demo-body"><h3>AWS documentation</h3><div class="setting">IAM Access Denied Errors <span>↗</span></div><div class="setting">Lambda role permissions <span>↗</span></div><div class="setting">S3 bucket policies <span>↗</span></div><div class="setting">CloudFormation events <span>↗</span></div><div class="setting">Troubleshooting guide <span>↗</span></div></div></article>
+<article class="demo"><div class="demo-top"><span class="cloud">☁</span><strong>Error history</strong><span class="window-dots">⌁ ×</span></div><div class="demo-body"><span class="pill blue">24 DETECTIONS</span><h3>Recent investigations</h3><div class="step"><span class="num">!</span><div>CloudFormation · MyFunction<small>Access denied · 2 minutes ago</small></div></div><div class="step"><span class="num">✓</span><div>Lambda · my-function<small>Runtime error · Resolved</small></div></div><div class="step"><span class="num">!</span><div>API Gateway · prod<small>Deployment failed</small></div></div></div></article>
+<article class="demo"><div class="demo-top"><span class="cloud">☁</span><strong>Detection settings</strong><span class="window-dots">⌁ ×</span></div><div class="demo-body"><h3>AWS Console detection</h3><p>Choose which visible errors to detect automatically.</p><div class="setting">CloudFormation <span class="toggle"></span></div><div class="setting">Lambda <span class="toggle"></span></div><div class="setting">API Gateway <span class="toggle"></span></div><div class="setting">IAM errors <span class="toggle"></span></div><div class="setting">Auto-open side panel <span class="toggle"></span></div></div></article>
+<article class="demo"><div class="demo-top"><span class="cloud">☁</span><strong>Notification styles</strong><span class="window-dots">⌁ ×</span></div><div class="demo-body"><span class="pill red">ERROR DETECTED</span><h3>CloudFormation stack update failed</h3><p>Review the issue and open an investigation when you're ready.</p><div class="fullbtn">View analysis →</div><div style="height:10px"></div><span class="pill amber">WARNING DETECTED</span><p style="margin-top:9px">A runtime issue was detected and added to history.</p></div></article>
+<article class="demo"><div class="demo-top"><span class="cloud">☁</span><strong>Privacy controls</strong><span class="window-dots">⌁ ×</span></div><div class="demo-body"><span class="pill green">CONSENT FIRST</span><h3>You control what is shared</h3><p>Review the error summary before sending diagnostic context to the cloud.</p><div class="step"><span class="num">✓</span><div>Local detection first</div></div><div class="step"><span class="num">✓</span><div>Redaction before sending</div></div><div class="step"><span class="num">✓</span><div>Confirm before AI analysis</div></div></div></article>
+</div></div></section>
 
 <section class="grid" aria-label="Product benefits"><article class="card"><div class="ico">⌕</div><h2>Detect locally</h2><p>Recognize common error and alert messages visible in supported AWS Console pages.</p></article><article class="card"><div class="ico">◷</div><h2>Investigation timeline</h2><p>Review detected issues and track each investigation step in one place.</p></article><article class="card"><div class="ico">✦</div><h2>AI, only with consent</h2><p>Review diagnostic context before sharing it. Never share credentials or secrets.</p></article></section>
 <section class="privacy"><div><h2>Your console context should stay under your control.</h2><p>Cloud diagnosis is an optional step. Review the information before sending it and avoid sharing credentials, secrets, or sensitive production data.</p></div><ul class="checks"><li>Local detection first</li><li>Explicit review before cloud sharing</li><li>Redaction of likely sensitive identifiers</li><li>Open development repository</li></ul></section>
 </main><footer class="wrap"><span>© <span id="year"></span> SameWindow AWS Assistant</span><span><a href="https://github.com/best-digital-offer/samewindow-aws-assistant">Source code</a> · Built independently</span></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();
-// Screenshot rails are static; no cloning or independent scrolling.
+document.querySelectorAll('.rail-track').forEach(function(track){if(track.dataset.loopReady==='true')return;Array.from(track.children).forEach(function(card){var clone=card.cloneNode(true);clone.setAttribute('aria-hidden','true');clone.querySelectorAll('img').forEach(function(img){img.loading='eager';});track.appendChild(clone);});track.dataset.loopReady='true';});
 document.querySelectorAll('.track').forEach(function(track){if(track.dataset.loopReady==='true')return;Array.from(track.children).forEach(function(card){var clone=card.cloneNode(true);clone.setAttribute('aria-hidden','true');clone.querySelectorAll('a,button,input,[tabindex]').forEach(function(el){el.setAttribute('tabindex','-1');});track.appendChild(clone);});track.dataset.loopReady='true';});</script>
 </body></html>
