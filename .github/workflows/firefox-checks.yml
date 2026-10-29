@@ -20,12 +20,18 @@ jobs:
       - run: npm run build:firefox
       - name: Package Firefox extension
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: npm run zip:firefox
+        run: |
+          npm run zip:firefox
+          mkdir -p artifacts
+          find .output -type f -name '*firefox.zip' -exec cp {} artifacts/ \;
+          find .output -type f -name '*sources.zip' -exec cp {} artifacts/ \;
+          test -n "$(find artifacts -type f -name '*.zip' -print -quit)"
+          ls -lh artifacts
       - name: Upload Firefox extension package
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v4
         with:
           name: samewindow-aws-assistant-firefox
-          path: .output/*.zip
+          path: artifacts/*.zip
           if-no-files-found: error
           retention-days: 14
