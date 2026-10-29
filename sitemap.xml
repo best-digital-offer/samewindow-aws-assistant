@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://www.samewindow.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+<url><loc>https://www.samewindow.com/setup.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://www.samewindow.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-console-access-denied-browser.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/cloudformation-stack-update-failed.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/lambda-unable-to-retrieve-code.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-console-network-failure.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/iam-not-authorized-to-perform.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/s3-access-denied-console.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/lambda-deployment-failed.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/sts-assumerole-access-denied.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-console-login-loop.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-console-extension-causing-errors.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/cloudformation-delete-failed.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/cloudformation-resource-handler-returned-message.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/api-gateway-deployment-failed.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/ec2-instance-connect-failed.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-console-wrong-region.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-console-stale-session.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-cloudtrail-find-console-error.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-console-error-message-capture.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-iam-policy-simulator-troubleshooting.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-browser-devtools-console-errors.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-console-performance-slow-loading.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/cloudformation-rollback-failed.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/lambda-execution-role-access-denied.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-console-access-denied-vpc-endpoint.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-console-browser-cache.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-console-error-monitoring-workflow.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-console-errors-for-developers.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-console-privacy-safe-ai-troubleshooting.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-console-troubleshooting-extension-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-lambda-runtime-import-error.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.samewindow.com/blog/aws-cloudformation-stack-drift.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>
