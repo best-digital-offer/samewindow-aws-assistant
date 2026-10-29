@@ -86,6 +86,13 @@ a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{heigh
 html{scroll-behavior:auto}
 body{overflow-x:hidden}
 
+
+/* Guarantee enough document height for ordinary vertical browser scrolling. */
+html,body{min-height:100%;height:auto;overflow-y:auto!important}
+main.wrap{min-height:0}
+.hero-stage{min-height:900px!important}
+@media(max-width:700px){.hero-stage{min-height:780px!important}}
+
 </style></head>
 <body>
 <header class="wrap nav"><div class="brand"><div class="mark">SW</div><span>SameWindow <span style="color:#fbbf24">AWS Assistant</span></span></div><span class="tag">Model 6 · AI Investigation Timeline</span></header>
