@@ -60,29 +60,18 @@ a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{heigh
 @media(max-width:1000px){.rail-image img{max-height:300px}}
 @media(max-width:700px){.rail-image{width:210px;flex-basis:210px}.rail-image img{max-height:290px}.rail-image:hover{transform:scale(1.045)}}
 
+
+/* Keep the bottom feature carousels scrolling; remove only the broken hero side rails. */
+.hero-stage{display:block;min-height:0;max-width:1160px;padding:26px 0 20px;overflow:visible}
+.hero-stage .hero{width:100%;max-width:780px;margin:0 auto;padding:55px 0 48px}
+.hero-stage .side-rail,.hero-stage .rail-card{display:none!important}
+
 </style></head>
 <body>
 <header class="wrap nav"><div class="brand"><div class="mark">SW</div><span>SameWindow <span style="color:#fbbf24">AWS Assistant</span></span></div><span class="tag">Model 6 · AI Investigation Timeline</span></header>
 <main class="wrap">
 <section class="hero-stage" aria-label="SameWindow introduction">
-<div class="side-rail left-rail"><div class="rail-track">
-<figure class="rail-image"><img src="/images/panel-01-error-detected.png" alt="Automatically detected AWS console error" loading="eager" /></figure>
-<figure class="rail-image"><img src="/images/panel-02-side-panel.png" alt="SameWindow extension side panel" loading="eager" /></figure>
-<figure class="rail-image"><img src="/images/panel-03-analysis-progress.png" alt="AWS error analysis in progress" loading="eager" /></figure>
-<figure class="rail-image"><img src="/images/panel-04-root-cause.png" alt="AI root cause explanation" loading="eager" /></figure>
-<figure class="rail-image"><img src="/images/panel-05-recommended-solution.png" alt="Recommended solution steps" loading="eager" /></figure>
-</div></div>
 <section class="hero"><div class="eyebrow"><span class="dot"></span> Built for AWS Console troubleshooting</div><h1>Turn AWS console errors into <span>clear next steps.</span></h1><p>Detect visible AWS errors, follow a clear investigation timeline, and review guided fixes before you apply them.</p><div class="actions"><a class="btn primary" href="https://github.com/best-digital-offer/samewindow-aws-assistant">View project on GitHub ↗</a><a class="btn secondary" href="https://github.com/best-digital-offer/samewindow-aws-assistant#local-development">Setup instructions</a></div><p class="note">Early access project · Firefox-first · Not affiliated with or endorsed by AWS.</p></section>
-<div class="side-rail right-rail"><div class="rail-track">
-<figure class="rail-image"><img src="/images/panel-06-test-verify.png" alt="Test and verify a suggested fix" loading="eager" /></figure>
-<figure class="rail-image"><img src="/images/panel-07-documentation.png" alt="Detailed troubleshooting documentation" loading="eager" /></figure>
-<figure class="rail-image"><img src="/images/panel-08-error-history.png" alt="Investigation error history" loading="eager" /></figure>
-<figure class="rail-image"><img src="/images/panel-09-settings.png" alt="SameWindow settings" loading="eager" /></figure>
-<figure class="rail-image"><img src="/images/panel-10-notifications.png" alt="Notification preferences" loading="eager" /></figure>
-</div></div>
-<article class="rail-card"><div class="mini-shot fix-shot"><div class="shot-bar"><b></b><i></i><i></i></div><div class="fix-step"><span>1</span><div><b>Review IAM policy</b><small>Check permissions</small></div></div><div class="fix-step"><span>2</span><div><b>Verify role</b><small>Confirm attachment</small></div></div><div class="fix-step"><span>3</span><div><b>Test safely</b><small>Validate changes</small></div></div></div><span class="rail-icon">✓</span><strong>Guided Fix</strong><small>Step-by-step suggestions</small></article>
-<article class="rail-card"><div class="mini-shot verify-shot"><div class="shot-bar"><b></b><i></i><i></i></div><div class="verify-line"><span>✓</span>Create test environment</div><div class="verify-line"><span>✓</span>Apply proposed fix</div><div class="verify-line current"><span>◉</span>Run verification…</div><div class="shot-success">Sandbox ready to test</div></div><span class="rail-icon">◈</span><strong>Test &amp; Verify</strong><small>Validate before applying</small></article>
-</div></div>
 </section>
 
 <div class="marquee" aria-label="Automatically scrolling product feature previews">
